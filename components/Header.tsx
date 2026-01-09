@@ -37,7 +37,7 @@ export default function Header() {
         isScrolled ? 'bg-black/95 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
       }`}
     >
-      <nav className="container-custom px-4 sm:px-6 lg:px-8 py-2 sm:py-4">
+      <nav className="container-custom px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="group">
@@ -46,7 +46,7 @@ export default function Header() {
               className="flex items-center gap-2"
             >
               {/* Logo Image */}
-              <div className="relative w-10 h-10 sm:w-14 sm:h-14">
+              <div className="relative w-11 h-11 sm:w-14 sm:h-14">
                 <Image
                   src="/logo.png"
                   alt="Hot Honey Tattoo Studio"
