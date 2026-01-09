@@ -57,7 +57,27 @@ export default function GaleriePage() {
       {/* Filter Section */}
       <section className="section-padding bg-black border-b border-white/10">
         <div className="container-custom">
-          <div className="flex flex-wrap gap-3 justify-center">
+          {/* Mobile: Horizontal Scrollable Slider */}
+          <div className="md:hidden overflow-x-auto scrollbar-hide -mx-4 px-4">
+            <div className="flex gap-3 min-w-max pb-2">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 text-xs uppercase tracking-wider transition-all rounded-sm whitespace-nowrap flex-shrink-0 ${
+                    selectedCategory === category
+                      ? 'bg-gradient-accent text-white'
+                      : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white border border-white/10'
+                  }`}
+                >
+                  {category === 'toate' ? 'Toate' : category.replace('-', ' ')}
+                </button>
+              ))}
+            </div>
+          </div>
+          
+          {/* Desktop: Centered Wrap */}
+          <div className="hidden md:flex flex-wrap gap-3 justify-center">
             {categories.map((category) => (
               <button
                 key={category}
